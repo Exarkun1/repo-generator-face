@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Repo-Generator</title>
+    <script src="request.js"></script>
+    <script src="event.js"></script>
+    <script src="status.js"></script>
+    <script>
+        updateListSrcRepos('github');
+        updateListLocRepos('bitbucket');
+    </script>
+</head>
+<body>
+    <div>
+        <span style="color: red;">Репозитории сервиса-источника</span>
+        <div id="srclist"></div>
+    </div>
+    <div>
+        <span style="color: red;">Локальные репозитории</span>
+        <div id="loclist"></div>
+    </div>
+    <div>
+        <button id="locbutton" onclick="updateAllReposLocal('github')">Синхронизовать локальные репозитории</button>
+        <span id="locstatus"></span>
+        <button id="trgbutton" onclick="updateAllReposTarget('bitbucket')">Синхронизовать целевые репозитории</button>
+        <span id="trgstatus"></span>
+    </div>
+</body>
