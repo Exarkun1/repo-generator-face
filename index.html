@@ -3,27 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Repo-Generator</title>
-    <script src="request.js"></script>
-    <script src="event.js"></script>
-    <script src="status.js"></script>
+    <script src="js/request.js"></script>
+    <script src="js/event.js"></script>
+    <script src="js/status.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/status.css">
     <script>
         updateListSrcRepos('github');
         updateListLocRepos('bitbucket');
     </script>
 </head>
 <body>
-    <div>
-        <span style="color: red;">Репозитории сервиса-источника</span>
-        <div id="srclist"></div>
-    </div>
-    <div>
-        <span style="color: red;">Локальные репозитории</span>
-        <div id="loclist"></div>
-    </div>
-    <div>
-        <button id="locbutton" onclick="updateAllReposLocal('github')">Синхронизовать локальные репозитории</button>
-        <span id="locstatus"></span>
-        <button id="trgbutton" onclick="updateAllReposTarget('bitbucket')">Синхронизовать целевые репозитории</button>
-        <span id="trgstatus"></span>
+    <div class="center list">
+        <div>
+            <span class="txt title-list">Репозитории сервиса-источника</span>
+            <div id="srclist"></div>
+            <div class="container"><div class="container-right">
+                <button id="locbutton" class="txt" onclick="updateAllReposLocal('github')">Синхронизовать все локальные</button>
+                <img id="locstatus" class="status">
+            </div></div>
+        </div>
+        <div>
+            <span class="txt title-list">Локальные репозитории</span>
+            <div id="loclist"></div>
+            <div class="container"><div class="container-right">
+                <button id="trgbutton" class="txt" onclick="updateAllReposTarget('bitbucket')">Синхронизовать все целевые</button>
+                <img id="trgstatus" class="status">
+            </div></div>
+        </div>
     </div>
 </body>

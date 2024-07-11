@@ -1,0 +1,32 @@
+.center {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -0%);
+}
+
+.txt {
+    font-size: 24px;
+    min-height: 1.75em;
+    font-family: 'Calibri';
+}
+
+.title-list {
+    color: red;
+}
+
+.list {
+    width: 30em;
+}
+
+.container {
+    display: inline-block;
+    width: 100%;
+}
+
+.container-left {
+    float: left;
+}
+
+.container-right {
+    float: right;
+}

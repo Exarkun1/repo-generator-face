@@ -5,16 +5,25 @@ function updateListRepos(repoNames, listReposId, action) {
         let containerElem = document.createElement('div');
 
         let nameElem = document.createElement('span');
+        nameElem.classList.add('txt');
         nameElem.textContent = repoName;
+        nameElem.classList.add('container-left');
 
         let buttonElem = document.createElement('button');
-        buttonElem.textContent = "Обновить";
+        buttonElem.classList.add('txt');
+        buttonElem.textContent = 'Обновить';
 
-        let statusElem = document.createElement('span');
+        let statusElem = document.createElement('a');
+        statusElem.classList.add('status');
         setStatusInit(statusElem);
 
+        let divElem = document.createElement('div');
+        divElem.append(buttonElem, statusElem);
+        divElem.classList.add('container-right');
+
         buttonElem.addEventListener('click', () => action(repoName, statusElem));
-        containerElem.append(nameElem, buttonElem, statusElem);
+        containerElem.classList.add('container');
+        containerElem.append(nameElem, divElem);
         listReposElem.appendChild(containerElem);
     }
 }

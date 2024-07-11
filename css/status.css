@@ -1,0 +1,17 @@
+.status {
+    width: 1.75em;
+	height: 1.75em;
+	content: url(../svg/init.svg);
+}
+
+.status.waiting {
+	content: url(../svg/waiting.svg);
+}
+
+.status.successful {
+	content: url(../svg/successful.svg);
+}
+
+.status.unsuccessful {
+	content: url(../svg/unsuccessful.svg);
+}
